@@ -13,7 +13,7 @@ import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const Signin = () => {
+const Signin = ({navigation}) => {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -35,7 +35,7 @@ const Signin = () => {
         </Text>
       </View>
       <View>
-      <View style={{marginBottom: 30}}>
+        <View style={{marginBottom: 30}}>
           <Text style={{fontSize: 14, fontWeight: '700'}}>Email</Text>
           <TextInput style={styles.input} placeholder="example@gmail.com" />
         </View>
@@ -56,14 +56,15 @@ const Signin = () => {
             />
           </View>
         </View>
-        <Text style={{fontSize: 12, lineHeight: 22}}>
-          Forgot Password?
-        </Text>
+        <Text style={{fontSize: 12, lineHeight: 22}}>Forgot Password?</Text>
       </View>
       {/* footer */}
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('home');
+            }}
             style={{
               backgroundColor: '#101010',
               paddingVertical: 12,

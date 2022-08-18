@@ -30,6 +30,7 @@ import {
 import Onboarding from './src/screens/onboarding';
 import Signup from './src/screens/signup';
 import Signin from './src/screens/signin';
+import Home from './src/screens/home';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -43,6 +44,7 @@ const App = () => {
         <Stack.Screen name="Home" component={Onboarding} />
         <Stack.Screen name="signin" component={Signin} />
         <Stack.Screen name="signup" component={Signup} />
+        <Stack.Screen name="home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
