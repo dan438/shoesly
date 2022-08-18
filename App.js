@@ -31,9 +31,15 @@ import Onboarding from './src/screens/onboarding';
 import Signup from './src/screens/signup';
 import Signin from './src/screens/signin';
 import Home from './src/screens/home';
+import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
+
+  //Hide Splash screen on app load.
+  React.useEffect(() => {
+    SplashScreen.hide();
+  });
 
   return (
     <NavigationContainer>

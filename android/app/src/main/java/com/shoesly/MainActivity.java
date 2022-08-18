@@ -1,7 +1,8 @@
 package com.shoesly;
-
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
+import org.devio.rn.splashscreen.SplashScreen; // here
 import com.facebook.react.ReactRootView;
 
 public class MainActivity extends ReactActivity {
@@ -14,6 +15,12 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "shoesly";
   }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.show(this);  // here
+        super.onCreate(savedInstanceState);
+    }
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and

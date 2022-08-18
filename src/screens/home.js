@@ -17,6 +17,7 @@ const Home = () => {
   return (
     <View style={{flex: 1}}>
       <ScrollView
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingBottom: '20%'}}
         style={{
           paddingHorizontal: 20,
