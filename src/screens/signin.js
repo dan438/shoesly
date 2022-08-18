@@ -86,7 +86,14 @@ const Signin = ({navigation}) => {
             marginVertical: 20,
           }}>
           <Text>Don’t have an account? </Text>
-          <Text style={{fontWeight: '700', fontSize: 14}}>Create Account</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('signup');
+            }}>
+            <Text style={{fontWeight: '700', fontSize: 14}}>
+              Create Account
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </KeyboardAvoidingView>
